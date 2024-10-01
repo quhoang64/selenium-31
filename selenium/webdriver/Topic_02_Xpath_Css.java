@@ -1,5 +1,5 @@
 package webdriver;
 
-public class Topic_02 {
+public class Topic_02_Xpath_Css {
     // demo
 }
