@@ -104,6 +104,8 @@ public class Topic_02_Locator {
 
         // Xpath vs Tagname
 
+        // Xpath get Text
+        //button[text()='Today']
     }
 
 
