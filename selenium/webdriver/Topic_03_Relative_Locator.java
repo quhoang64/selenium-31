@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 import java.time.Duration;
 import java.util.List;
 
-public class Topic_04_Relative_Locator {
+public class Topic_03_Relative_Locator {
     WebDriver driver;
 
     // Pre-condition
