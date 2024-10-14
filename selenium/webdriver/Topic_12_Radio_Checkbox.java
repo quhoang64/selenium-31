@@ -106,7 +106,7 @@ public class Topic_12_Radio_Checkbox {
     @Test
     public void TC_04_Custom_Checkbox() {
 
-        driver.get("https://login.ubuntu.com/");
+        driver.get("https://log in.ubuntu.com/");
 //        // Case 1: cách 1 -> khó maintain
 //        driver.findElement(By.xpath("//span[text()='I don’t have an Ubuntu One account']/parent::label")).click();
 //        sleepInSeconds(3);
@@ -121,6 +121,26 @@ public class Topic_12_Radio_Checkbox {
         // interface Webdriver
         // Interface JavascriptExecutor
         // Ep kiểu interface qua kiểu interface khác
+
+    }
+
+    @Test
+    public void TC_06_Custom_Radio_GGForm(){
+        driver.get("https://docs.google.com/forms/d/e/1FAIpQLSfiypnd69zhuDkjKgqvpID9kwO29UCzeCVrGGtbNPZXQok0jA/viewform");
+        By radioButtonCanThO = By.xpath("//div[@aria-label='Cần Thơ']");
+        By quangNamCheckbox = By.xpath("//div[@aria-label='Quảng Nam']");
+        // Cách 1
+        Assert.assertEquals(driver.findElement(radioButtonCanThO).getAttribute("aria-checked"), "false");
+        // Cách 2
+        Assert.assertTrue(driver.findElement(By.xpath("//div[@aria-label='Cần Thơ' and @aria-checked='false']")).isDisplayed());
+
+        driver.findElement(radioButtonCanThO).click();
+        sleepInSeconds(2);
+        Assert.assertEquals(driver.findElement(radioButtonCanThO).getAttribute("aria-checked"), "true");
+
+        driver.findElement(quangNamCheckbox).click();
+        sleepInSeconds(2);
+        Assert.assertEquals(driver.findElement(quangNamCheckbox).getAttribute("aria-checked"), "true");
 
     }
 
