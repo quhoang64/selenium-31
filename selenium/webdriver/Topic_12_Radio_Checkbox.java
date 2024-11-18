@@ -106,7 +106,7 @@ public class Topic_12_Radio_Checkbox {
     @Test
     public void TC_04_Custom_Checkbox() {
 
-        driver.get("https://log in.ubuntu.com/");
+        driver.get("https://login.ubuntu.com/");
 //        // Case 1: cách 1 -> khó maintain
 //        driver.findElement(By.xpath("//span[text()='I don’t have an Ubuntu One account']/parent::label")).click();
 //        sleepInSeconds(3);
