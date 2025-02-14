@@ -128,10 +128,12 @@ public class Topic_21_Window_Tab {
         }
     }
 
-    public void switchToWindowByID(String windowID) {
+    public void switchToWindowByID() {
+        String originalWindow = driver.getWindowHandle();
+        driver.findElement(By.id("")).click();
         Set<String> allIDs = driver.getWindowHandles();
         for (String id : allIDs) {
-            if(!id.equals(windowID)) {
+            if(!id.equals(originalWindow)) {
                 driver.switchTo().window(id);
                 break;
             }

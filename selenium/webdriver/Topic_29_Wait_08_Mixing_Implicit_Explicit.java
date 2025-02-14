@@ -18,12 +18,12 @@ public class Topic_29_Wait_08_Mixing_Implicit_Explicit {
     public void beforeClass(){
         driver = new ChromeDriver();
         driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
     }
     //Testcase
     @Test
     public void TC_01_Mix_Implicit_Explicit() {
         driver.get("https://www.facebook.com/");
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
         explicitWait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
